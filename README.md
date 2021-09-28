@@ -1,4 +1,4 @@
-# QA internship web project
+# QA Internship Web Project
 
 ## What is Vikta
 Vikta project is a simple web-application created for teaching students of GD Junior Test Automation Engineers Schooland. It is based on such technologies as: Spring Framework, MySQL, Java Faker, JUnit and Allure. 
@@ -15,7 +15,6 @@ Vikta project is a simple web-application created for teaching students of GD Ju
      - InteliJIdea Community Edition, Java 8, Chrome browser have to be preinstalled
      - `vikta_readme_UNIX.txt`
 
-## How to use testing projects with the greatest benefits
 
 ## UI Testing project
 An extremely simple GUI test automation solution for Vikta application based on Cucumber BDD framework. Contains the very basics of a test automation framework. 
@@ -23,6 +22,8 @@ An extremely simple GUI test automation solution for Vikta application based on 
 Technologies stack: **BDD, Cucumber, JUnit, Selenium WebDriver.**
 
 Instructions to the project are placed in `Vikta-UI-testing-sample/README.md` file.
+
+Tasks to the project are placed in `Vikta-UI-testing-sample/TASKS.md` file.
 
 ## API Testing project 
 A simple API test automation solution for Vikta application based on RestAssured framework. 
