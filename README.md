@@ -1,7 +1,9 @@
 # QA Internship Web Project
 
+[Overview presentation](https://docs.google.com/presentation/d/12gMSPreiXaa6Gbz9GEw2Q-zdxUCSzWyKvkkraGqOtoI/edit?usp=sharing)
+
 ## What is Vikta
-Vikta project is a simple web-application created for teaching students of GD Junior Test Automation Engineers Schooland. It is based on such technologies as: Spring Framework, MySQL, Java Faker, JUnit and Allure. 
+Vikta project is a simple web-application created for teaching students of GD Junior Test Automation Engineers Schooland. It is based on such technologies as: Docker Compose, Spring Framework, MySQL, Java Faker, JUnit and Allure. 
 
 **NOTE!** All test projects are needed Vikta to be installed in Docker on local machine. 
 
