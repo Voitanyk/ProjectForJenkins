@@ -32,6 +32,8 @@ e.g.
 - Install a Cucumber plugin fo IntelijIdea.
 - Configure TestRunner configuration in IntelijIdea for local runs and debugging.
 
+# Tasks
+- [TASKS.md](https://gitlab.griddynamics.net/kkhyzhniak/qa-internship-web-project/-/blob/main/Vikta-UI-testing-sample/TASKS.md) file contains certain steps to do with the project to gain the best practical expirience.
 
 # Links:
 - https://cucumber.io/docs/guides/overview/
