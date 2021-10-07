@@ -15,23 +15,23 @@ import org.openqa.selenium.support.FindBy;
  */
 public class BasePage {
 
-    //TODO: Add more header/ footer elements.
+  //TODO: Add more header/ footer elements.
 
-    @FindBy(id = "sploggedInName")
-    protected WebElement sploggedInName;
+  @FindBy(id = "sploggedInName")
+  private WebElement sploggedInName;
 
-    @FindBy(id = "aLogoutTop")
-    protected WebElement aLogoutTop;
+  @FindBy(id = "aLogoutTop")
+  private WebElement aLogoutTop;
 
-    public String getCurrentUserName() {
-        return sploggedInName.getText();
-    }
+  public String getCurrentUserName() {
+    return sploggedInName.getText();
+  }
 
-    public WebElement getLoggedInName() {
-        return sploggedInName;
-    }
+  public WebElement getLoggedInName() {
+    return sploggedInName;
+  }
 
-    public void clickLogout() {
-        aLogoutTop.click();
-    }
+  public void clickLogout() {
+    aLogoutTop.click();
+  }
 }

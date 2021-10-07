@@ -8,49 +8,49 @@ import org.openqa.selenium.support.FindBy;
  */
 public class LoginPage {
 
-    @FindBy(id = "tfLoginname")
-    private WebElement txtLoginname;
+  @FindBy(id = "tfLoginname")
+  private WebElement txtLoginname;
 
-    @FindBy(id = "tfPassword")
-    private WebElement txtPassword;
+  @FindBy(id = "tfPassword")
+  private WebElement txtPassword;
 
-    @FindBy(id = "btnSubmitLogin")
-    private WebElement btnSubmitLogin;
+  @FindBy(id = "btnSubmitLogin")
+  private WebElement btnSubmitLogin;
 
-    @FindBy(id = "btnSubmitGoToHome")
-    private WebElement btnGoToHome;
+  @FindBy(id = "btnSubmitGoToHome")
+  private WebElement btnGoToHome;
 
-    @FindBy(xpath = "//div[@class='login']//p[contains(@style, 'color: #FF1C19')]")
-    private WebElement lblError;
+  @FindBy(xpath = "//div[@class='login']//p[contains(@style, 'color: #FF1C19')]")
+  private WebElement lblError;
 
-    //TODO: Add [Sign-up] button.
+  //TODO: Add [Sign-up] button.
 
-    public HomePage login(String username, String password) {
-        tryLogin(username, password);
-        return new HomePage();
-    }
+  public HomePage login(String username, String password) {
+    tryLogin(username, password);
+    return new HomePage();
+  }
 
-    public void tryLogin(String username, String password) {
-        txtLoginname.clear();
-        txtLoginname.sendKeys(username);
+  public void tryLogin(String username, String password) {
+    txtLoginname.clear();
+    txtLoginname.sendKeys(username);
 
-        txtPassword.clear();
-        txtPassword.sendKeys(password);
+    txtPassword.clear();
+    txtPassword.sendKeys(password);
 
-        btnSubmitLogin.click();
-    }
+    btnSubmitLogin.click();
+  }
 
-    public HomePage gotoHome() {
-        btnGoToHome.click();
+  public HomePage gotoHome() {
+    btnGoToHome.click();
 
-        return new HomePage();
-    }
+    return new HomePage();
+  }
 
-    public String getErrorMessage() {
-        return lblError.getText();
-    }
+  public String getErrorMessage() {
+    return lblError.getText();
+  }
 
-    public WebElement getErrorWebElement() {
-        return lblError;
-    }
+  public WebElement getErrorWebElement() {
+    return lblError;
+  }
 }

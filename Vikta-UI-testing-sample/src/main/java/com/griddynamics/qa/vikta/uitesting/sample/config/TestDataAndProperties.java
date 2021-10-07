@@ -4,25 +4,23 @@ import org.aeonbits.owner.Config;
 
 // If you are curious - http://owner.aeonbits.org/docs/singleton/
 @Config.LoadPolicy(Config.LoadType.MERGE)
-@Config.Sources({"system:env",
-                    "system:properties",
-                    "classpath:app.properties"})
+@Config.Sources({ "system:env", "system:properties", "classpath:app.properties" })
 public interface TestDataAndProperties extends Config {
-    int implicitlyWait();
-    int pageLoadTimeout();
+  String browser();
 
-    int waitTimeout();
+  int pageLoadTimeout();
 
-    String baseHost();
-    String basePort();
-    String baseUrl();
+  int waitTimeout();
+  String baseHost();
+  String basePort();
+  String baseUrl();
 
-    String loginPageUrl();
-    String registrationPageUrl();
+  String loginPageUrl();
+  String registrationPageUrl();
 
-    String adminName();
-    String adminPassword();
+  String adminName();
+  String adminPassword();
 
-    String userName();
-    String userPassword();
+  String userName();
+  String userPassword();
 }
