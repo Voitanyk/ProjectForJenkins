@@ -20,8 +20,10 @@ public class RegistrationPage extends BasePage {
   @FindBy(id = "tbMiddleName")
   private WebElement tbMiddleName;
 
-  //TODO: Add missing elements.
+  //TODO: Add missing elements.+
 
+  @FindBy(id = "tbEmail")
+  private WebElement tbEmail;
   @FindBy(id = "tbPassword")
   private WebElement tbPassword;
 
@@ -31,7 +33,9 @@ public class RegistrationPage extends BasePage {
   @FindBy(id = "tSuccessMessage")
   private WebElement tSuccessMessage;
 
-  //TODO: Add [Register User] button support.
+  //TODO: Add [Register User] button support.+
+  @FindBy(id = "btnRegister")
+  private WebElement btnRegister;
 
   public void typeInLoginname(String value) {
     typeIn(value, tbLoginName);
@@ -48,10 +52,13 @@ public class RegistrationPage extends BasePage {
   public void typeInPatronim(String value) {
     typeIn(value, tbMiddleName);
   }
-
+  public void typeInEmail(String value) {
+    typeIn(value, tbEmail);
+  }
   public void typeInPassword(String value) {
     typeIn(value, tbPassword);
   }
+  public void clickButtonRegister() { btnRegister.click();}
 
   private void typeIn(String value, WebElement targetElement) {
     targetElement.clear();

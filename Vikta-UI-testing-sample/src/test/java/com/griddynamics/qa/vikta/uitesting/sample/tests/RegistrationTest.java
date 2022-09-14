@@ -25,10 +25,10 @@ public class RegistrationTest extends BaseTest {
     registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.FIRSTNAME);
     registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.PATRONIM);
     // TODO: uncomment, debug, implement - make it working.
-    //registrationSteps.typeInto(RegistrationSteps.FieldName.EMAIL);
-    //registrationSteps.typeInto(RegistrationSteps.FieldName.PASSWORD);
+    registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.EMAIL);
+    registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.PASSWORD);
     // TODO: And user hits the Register User button
-
+    registrationSteps.clickRegisterButton();
     // Then Registration page the current one
     registrationSteps.verifyCurrentPageIsRegistration();
     // TODO: Then Successful registration message is displayed

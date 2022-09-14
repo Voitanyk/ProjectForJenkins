@@ -23,4 +23,5 @@ public interface TestDataAndProperties extends Config {
 
   String userName();
   String userPassword();
+  int stringLength();
 }

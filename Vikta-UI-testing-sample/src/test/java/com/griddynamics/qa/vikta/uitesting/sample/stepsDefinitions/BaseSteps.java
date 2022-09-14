@@ -63,7 +63,7 @@ abstract class BaseSteps {
 
   //TODO: Make static and move to some Utils.
   //TODO: Use something like JavaFaker.
-  private String generateRandomString(int maxLength) {
+ /* private String generateRandomString(int maxLength) {
     String candidate = UUID.randomUUID().toString().replaceAll("\\d", "A");
     if (candidate.length() >= maxLength) {
       return candidate.substring(0, maxLength);
@@ -73,6 +73,6 @@ abstract class BaseSteps {
   }
 
   String generateRandomString() {
-    return generateRandomString(16); //Remember!!! Magic numbers are bad, bad, bad practice!
-  }
+    return generateRandomString(16); //Remember!!! Magic numbers are bad, bad, bad practice! -fixed
+  }*/
 }

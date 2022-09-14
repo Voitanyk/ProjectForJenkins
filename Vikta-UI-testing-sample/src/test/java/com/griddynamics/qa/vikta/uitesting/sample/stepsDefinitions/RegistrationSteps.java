@@ -2,6 +2,7 @@ package com.griddynamics.qa.vikta.uitesting.sample.stepsDefinitions;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import com.griddynamics.qa.vikta.uitesting.sample.config.RandomData;
 import com.griddynamics.qa.vikta.uitesting.sample.pageObjects.RegistrationPage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
@@ -11,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
  * Registration functionality related steps.
  */
 public class RegistrationSteps extends BaseSteps {
+  RandomData randomData = new RandomData();
 
   private static String SUCCESSFUL_REGISTRATION_MESSAGE_PREFIX =
     "User has been registered successfully: ";
@@ -25,6 +27,7 @@ public class RegistrationSteps extends BaseSteps {
     FIRSTNAME,
     PATRONIM,
     PASSWORD,
+    EMAIL,
   }
 
   @Step
@@ -37,26 +40,29 @@ public class RegistrationSteps extends BaseSteps {
     String valueToReturn;
     switch (fieldName) {
       case LOGINNAME:
-        valueToReturn = generateRandomString();
+        valueToReturn = randomData.generateRandomString();
         page().typeInLoginname(valueToReturn);
         break;
       case SURNAME:
-        valueToReturn = generateRandomString();
+        valueToReturn = randomData.generateRandomString();
         page().typeInSurname(valueToReturn);
         break;
       case FIRSTNAME:
-        valueToReturn = generateRandomString();
+        valueToReturn = randomData.generateRandomString();
         page().typeInFirstname(valueToReturn);
         break;
       case PATRONIM:
-        valueToReturn = generateRandomString();
+        valueToReturn = randomData.generateRandomString();
         page().typeInPatronim(valueToReturn);
         break;
       case PASSWORD:
-        valueToReturn = generateRandomString();
+        valueToReturn = randomData.generateRandomString();
         page().typeInPassword(valueToReturn);
         break;
-      //TODO: Add the rest... .
+      case EMAIL:
+        valueToReturn = randomData.generateRandomEmail();
+        page().typeInEmail(valueToReturn);
+      //TODO: Add the rest... . +
       default:
         throw new IllegalArgumentException(
           "Unsupported Registration page field name: " + fieldName
@@ -67,6 +73,11 @@ public class RegistrationSteps extends BaseSteps {
   }
 
   //TODO: Add rest of the steps needed.
+
+  @Step
+  public void clickRegisterButton(){
+    page().clickButtonRegister();
+  }
 
   @Step
   public void verifyCurrentPageIsRegistration() {
@@ -97,4 +108,5 @@ public class RegistrationSteps extends BaseSteps {
   private RegistrationPage page() {
     return getPage(RegistrationPage.class);
   }
+
 }
