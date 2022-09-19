@@ -62,8 +62,18 @@ public class BasePage {
   @FindBy(id = "aLogin")
   private WebElement aLogin;
 
+  @FindBy(xpath = "//*[@id=\"navbar\"]/ul[2]/li/span/span[2]") //*[@id="navbar"]/ul[2]/li/span/span[2]
+  private WebElement userRole;
+
+  @FindBy(id = "aAddUser")
+  private WebElement aAddUser;
+
   public String getCurrentUserName() {
     return sploggedInName.getText();
+  }
+
+  public String getUserRole() {
+    return userRole.getText();
   }
 
   public WebElement getLoggedInName() {
@@ -74,17 +84,55 @@ public class BasePage {
     aLogoutTop.click();
   }
 
-  public void clickAddresses() { aAddresses.click();}
-  public void clickAddAddresses() { aAddAddress.click();}
-  public void clickCards() { aCards.click();}
-  public void clickAddCards() { aAddCards.click();}
-  public void clickEditProfile() { aEditProfile.click();}
-  public void clickNavbar() { navbar.click();}
-  public void clickLogoutBottom() { aLogoutBottom.click();}
-  public void clickInSearchField() { tbTerm.click();}
-  public void clickSearchButton() { btnSearch.click();}
-  public void clickResetButton() { btnResetSearchCriteria.click();}
-  public void clickSignUpButton() { aRegistration.click();}
-  public void clickLoginButton() { aLogin.click();}
+  public void clickAddUser() {
+    aAddUser.click();
+  }
 
+  public void clickAddresses() {
+    aAddresses.click();
+  }
+
+  public void clickAddAddresses() {
+    aAddAddress.click();
+  }
+
+  public void clickCards() {
+    aCards.click();
+  }
+
+  public void clickAddCards() {
+    aAddCards.click();
+  }
+
+  public void clickEditProfile() {
+    aEditProfile.click();
+  }
+
+  public void clickNavbar() {
+    navbar.click();
+  }
+
+  public void clickLogoutBottom() {
+    aLogoutBottom.click();
+  }
+
+  public void clickInSearchField() {
+    tbTerm.click();
+  }
+
+  public void clickSearchButton() {
+    btnSearch.click();
+  }
+
+  public void clickResetButton() {
+    btnResetSearchCriteria.click();
+  }
+
+  public void clickSignUpButton() {
+    aRegistration.click();
+  }
+
+  public void clickLoginButton() {
+    aLogin.click();
+  }
 }

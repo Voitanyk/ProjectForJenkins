@@ -31,10 +31,8 @@ public class LoginTest extends BaseTest {
   public void testRegularUserIsAbleToLogin() {
     // Given user opens Login page
     loginSteps.openLoginPage();
-
     // When user logins as regular user
     loginSteps.loginAsRegularUser();
-
     // Then Home is displayed for the regular user
     loginSteps.verifyCurrentPageIsHomePageForTheRegularUser();
   }
@@ -46,10 +44,8 @@ public class LoginTest extends BaseTest {
   public void testAdminUserIsAbleToLogin() {
     // Given user opens Login page
     loginSteps.openLoginPage();
-
     // When user logins as ADMIN user
     loginSteps.loginAsAdmin();
-
     // Then Home is displayed for the ADMIN user
     loginSteps.verifyCurrentPageIsHomePageForTheAdmin();
   }

@@ -24,4 +24,9 @@ public interface TestDataAndProperties extends Config {
   String userName();
   String userPassword();
   int stringLength();
+  String existingEmail();
+  String userRole();
+  String adminRole();
+  String createUserPageUrl();
+  String avatarPicture();
 }

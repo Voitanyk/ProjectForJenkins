@@ -12,6 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 /**
  * Base class to contain common auxiliary methods for step definitions.
@@ -45,25 +46,24 @@ abstract class BaseSteps {
     return PageFactory.initElements(getDriver(), pageClass);
   }
 
-  void verifyCurrentPageIsHomePageForTheUser(String username) {
+  void verifyCurrentPageIsHomePageForTheUser(String username, String role) {
     BasePage currentPage = getPage(BasePage.class);
     getWait().until(ExpectedConditions.visibilityOf(currentPage.getLoggedInName()));
-
     assertCurrentPageUrl(getData().baseUrl(), "Home page was expected to be the current one.");
-
     assertThat(currentPage.getCurrentUserName())
       .as("Unexpected current user's name displayed. Expected: %s", username)
       .contains(username);
-    //TODO: Assert displayed role as well.
+    //TODO: Assert displayed role as well.+
+    assertThat(currentPage.getUserRole()).as(username).contains(role);
   }
 
   void assertCurrentPageUrl(String expectedUrl, String messageOnFail) {
     assertThat(getDriver().getCurrentUrl()).as(messageOnFail).contains(expectedUrl);
   }
+  //TODO: Make static and move to some Utils.+
+  //TODO: Use something like JavaFaker.+
 
-  //TODO: Make static and move to some Utils.
-  //TODO: Use something like JavaFaker.
- /* private String generateRandomString(int maxLength) {
+  /* private String generateRandomString(int maxLength) {
     String candidate = UUID.randomUUID().toString().replaceAll("\\d", "A");
     if (candidate.length() >= maxLength) {
       return candidate.substring(0, maxLength);

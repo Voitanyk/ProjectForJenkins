@@ -28,7 +28,9 @@ public class LoginPage {
   @FindBy(id = "btnSubmitGoToRegistration")
   private WebElement btnSubmitGoToRegistration;
 
-  public void clickSignUpButtonOnLoginPage() { btnSubmitGoToRegistration.click();}
+  public void clickSignUpButtonOnLoginPage() {
+    btnSubmitGoToRegistration.click();
+  }
 
   public HomePage login(String username, String password) {
     tryLogin(username, password);
