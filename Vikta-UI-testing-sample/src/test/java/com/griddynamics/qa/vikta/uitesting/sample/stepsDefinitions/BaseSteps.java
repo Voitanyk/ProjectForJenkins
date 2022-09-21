@@ -4,6 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import com.codeborne.selenide.WebDriverRunner;
 import com.griddynamics.qa.vikta.uitesting.sample.config.DataProvider;
+import com.griddynamics.qa.vikta.uitesting.sample.config.RandomData;
 import com.griddynamics.qa.vikta.uitesting.sample.config.TestDataAndProperties;
 import com.griddynamics.qa.vikta.uitesting.sample.pageObjects.BasePage;
 import java.util.Objects;
@@ -21,6 +22,7 @@ abstract class BaseSteps {
 
   private WebDriver driver;
   private WebDriverWait wait;
+  RandomData randomData = new RandomData();
 
   BaseSteps(WebDriver driver) {
     this.driver = driver;
@@ -53,15 +55,15 @@ abstract class BaseSteps {
     assertThat(currentPage.getCurrentUserName())
       .as("Unexpected current user's name displayed. Expected: %s", username)
       .contains(username);
-    //TODO: Assert displayed role as well.+
+    //TODO: Assert displayed role as well.done+
     assertThat(currentPage.getUserRole()).as(username).contains(role);
   }
 
   void assertCurrentPageUrl(String expectedUrl, String messageOnFail) {
     assertThat(getDriver().getCurrentUrl()).as(messageOnFail).contains(expectedUrl);
   }
-  //TODO: Make static and move to some Utils.+
-  //TODO: Use something like JavaFaker.+
+  //TODO: Make static and move to some Utils.done+
+  //TODO: Use something like JavaFaker.done+
 
   /* private String generateRandomString(int maxLength) {
     String candidate = UUID.randomUUID().toString().replaceAll("\\d", "A");

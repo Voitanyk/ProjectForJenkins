@@ -29,4 +29,8 @@ public interface TestDataAndProperties extends Config {
   String adminRole();
   String createUserPageUrl();
   String avatarPicture();
+  String usersPageUrl();
+  String userEmail();
+  String addCategoryPageUrl();
+  String categoriesPageUrl();
 }

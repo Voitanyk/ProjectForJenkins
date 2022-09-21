@@ -14,7 +14,7 @@ import org.testng.Assert;
  */
 public class RegistrationSteps extends BaseSteps {
 
-  RandomData randomData = new RandomData();
+//  RandomData randomData = new RandomData();
 
   private static String SUCCESSFUL_REGISTRATION_MESSAGE_PREFIX =
     "User has been registered successfully: ";

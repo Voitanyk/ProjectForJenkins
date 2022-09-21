@@ -67,32 +67,6 @@ public class CreateUserPage extends BasePage {
     targetElement.sendKeys(value);
   }
 
-  /*  public void typeInLoginname(String value) {
-        typeIn(value, tbLoginName);
-    }
-
-    public void typeInSurname(String value) {
-        typeIn(value, tbSurname);
-    }
-
-    public void typeInFirstname(String value) {
-        typeIn(value, tbFirstName);
-    }
-
-    public void typeInPatronim(String value) {
-        typeIn(value, tbMiddleName);
-    }
-
-    public void typeInEmail(String value) {
-        typeIn(value, tbEmail);
-    }
-
-    public void typeInPassword(String value) {
-        typeIn(value, tbPassword);
-    }
-
-   */
-
   public void typeInAvatarImage(String value) {
     typeIn(value, tbPathToAvatarImage);
   }
