@@ -17,7 +17,6 @@ public class CategoriesSteps extends BaseSteps {
         assertThat(getDriver().findElement(By.xpath("//a[contains(text(),"+ categoryTitle+")]")).isDisplayed());
         assertThat(getDriver().findElement(By.xpath("//a[contains(text(),"+ categoryDescription+")]")).isDisplayed());
     }
-
     @Step
     public void openCategoriesPage(){
         getDriver().get(getData().categoriesPageUrl());
@@ -30,16 +29,13 @@ public class CategoriesSteps extends BaseSteps {
     public void typeRandomValueInSearchField(){
         page().searchField().sendKeys(randomData.generateRandomString());
     }
-
     @Step
     public void verifyThatTheSearchFieldIsEmpty(){
         assertThat(page().searchField().getAttribute("value").isEmpty());
     }
-
     public CategoriesSteps(WebDriver driver) {
         super(driver);
     }
-
     private CategoriesPage page() {
         return getPage(CategoriesPage.class);
     }

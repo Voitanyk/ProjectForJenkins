@@ -10,15 +10,12 @@ public class CategoriesTest extends BaseTest{
     String enteredTitle;
     String enteredDescription;
     String enteredPath;
-    RandomData randomData;
-   // String valueToType = randomData.generateRandomString();
 
     @BeforeMethod
     public void setUp(){
         loginSteps.openLoginPage();
         loginSteps.loginAsAdmin();
     }
-
     @Test
     public void testCreatedCategoryIsAddedToTheList(){
         addCategorySteps.openAddCategoryPage();

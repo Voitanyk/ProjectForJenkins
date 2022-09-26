@@ -48,7 +48,6 @@ public class AddCategorySteps extends BaseSteps {
     public void clickSaveButton(){
         page().clickSaveButton();
     }
-
     @Step
     public void clickResetButton(){page().clickResetButton();}
     @Step

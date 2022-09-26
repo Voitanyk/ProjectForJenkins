@@ -14,7 +14,6 @@ public class HomePageSteps extends BaseSteps {
   public HomePageSteps(WebDriver driver) {
     super(driver);
   }
-
   @Step
   public void clickCreateUser() {
     getDriver().navigate().to(getData().createUserPageUrl());

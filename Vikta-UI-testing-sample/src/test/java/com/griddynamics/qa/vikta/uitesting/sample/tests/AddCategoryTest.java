@@ -8,7 +8,6 @@ public class AddCategoryTest extends BaseTest{
     String enteredTitle;
     String enteredDescription;
     String enteredPath;
-
     @BeforeMethod
     public void setUp(){
         loginSteps.openLoginPage();
