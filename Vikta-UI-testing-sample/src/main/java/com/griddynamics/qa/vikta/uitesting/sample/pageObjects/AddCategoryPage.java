@@ -7,6 +7,10 @@ public class AddCategoryPage extends BasePage{
     @FindBy(id = "tbTitle")
     private WebElement tbTitle;
 
+    public WebElement titleField(){
+        return tbTitle;
+    }
+
     public void clickInTitleField(){
         tbTitle.click();
     }
@@ -16,11 +20,19 @@ public class AddCategoryPage extends BasePage{
     @FindBy(id = "tbDescription")
     private WebElement tbDescription;
 
+    public WebElement descriptionField(){
+        return tbDescription;
+    }
+
     public void clickInDescriptionField(){
         tbDescription.click();
     }
     @FindBy(id = "tbPathToCatImage")
     private WebElement tbPathToCatImage;
+
+    public WebElement pathField(){
+        return tbPathToCatImage;
+    }
 
     public void clickInPathToImageField(){
         tbPathToCatImage.click();
@@ -36,6 +48,13 @@ public class AddCategoryPage extends BasePage{
 
     public void clickToTheListOfCategoriesButton(){
         aBack.click();
+    }
+
+    @FindBy(id = "btnReset")
+    private WebElement btnReset;
+
+    public void clickResetButton(){
+        btnReset.click();
     }
     public void typeInTitle(String value) {
         typeIn(value, tbTitle);

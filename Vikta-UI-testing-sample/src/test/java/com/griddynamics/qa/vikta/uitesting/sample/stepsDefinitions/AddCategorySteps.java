@@ -5,6 +5,8 @@ import com.griddynamics.qa.vikta.uitesting.sample.pageObjects.CreateUserPage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
+import java.time.Duration;
+
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.testng.AssertJUnit.assertEquals;
 
@@ -32,7 +34,7 @@ public class AddCategorySteps extends BaseSteps {
                 page().typeInDescription(valueToReturn);
                 break;
             case PATH:
-                valueToReturn = randomData.generateRandomUrl();
+                valueToReturn = getData().categoryPicture();
                 page().typeInPathToImage(valueToReturn);
                 break;
             default:
@@ -46,14 +48,51 @@ public class AddCategorySteps extends BaseSteps {
     public void clickSaveButton(){
         page().clickSaveButton();
     }
+
+    @Step
+    public void clickResetButton(){page().clickResetButton();}
     @Step
     public void clickToTheListOfCategoriesButton(){
-        page().clickSaveButton();
+        page().clickToTheListOfCategoriesButton();
     }
 
     @Step
     public void verifyMessageOfCategoryCreation(){
         assertThat(page().categoryCreatedMessage().isDisplayed());
+    }
+    @Step
+    public void verifyThatCategoriesPageIsOpened(){
+        assertEquals(getDriver().getCurrentUrl(), getData().categoriesPageUrl());
+    }
+
+    @Step
+    public void verifyThatEnteredTestIsDisplayedInTheField(FieldName fieldName, String enteredText){
+        switch (fieldName){
+            case TITLE:
+                assertEquals(page().titleField().getAttribute("value"), enteredText);
+                break;
+            case DESCRIPTION:
+                assertEquals(page().descriptionField().getAttribute("value"), enteredText);
+                break;
+            case PATH:
+                assertEquals(page().pathField().getAttribute("value"), getData().categoryPicture());
+                break;
+        }
+    }
+
+    @Step
+    public void verifyThatTheFieldIsEmpty(FieldName fieldName){
+        switch (fieldName){
+            case TITLE:
+                assertThat(page().titleField().getAttribute("value").isEmpty());
+                break;
+            case DESCRIPTION:
+                assertThat(page().descriptionField().getAttribute("value").isEmpty());
+                break;
+            case PATH:
+                assertThat(page().pathField().getAttribute("value").isEmpty());
+                break;
+        }
     }
 
     public AddCategorySteps(WebDriver driver) {

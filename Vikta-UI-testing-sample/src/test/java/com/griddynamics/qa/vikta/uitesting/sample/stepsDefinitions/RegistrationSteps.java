@@ -77,7 +77,7 @@ public class RegistrationSteps extends BaseSteps {
     return valueToReturn;
   }
 
-  //TODO: Add rest of the steps needed.+
+  // TODO: Add rest of the steps needed.+
   @Step
   public void typeExistingLoginName() {
     page().typeInLoginname(getData().userName());

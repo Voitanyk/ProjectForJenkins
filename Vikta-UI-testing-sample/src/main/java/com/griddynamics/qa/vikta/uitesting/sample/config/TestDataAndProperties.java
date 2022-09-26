@@ -33,4 +33,5 @@ public interface TestDataAndProperties extends Config {
   String userEmail();
   String addCategoryPageUrl();
   String categoriesPageUrl();
+  String categoryPicture();
 }

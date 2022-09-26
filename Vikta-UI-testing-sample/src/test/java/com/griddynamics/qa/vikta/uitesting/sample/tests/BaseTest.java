@@ -22,6 +22,7 @@ public class BaseTest {
   CreateUserPageSteps createUserPageSteps;
   UsersPageSteps usersPageSteps;
   AddCategorySteps addCategorySteps;
+  CategoriesSteps categoriesSteps;
 
   BaseTest() {
     driverManager = new DriverManager(DataProvider.get());
@@ -47,6 +48,7 @@ public class BaseTest {
     createUserPageSteps = new CreateUserPageSteps(driverManager.get());
     usersPageSteps = new UsersPageSteps(driverManager.get());
     addCategorySteps = new AddCategorySteps(driverManager.get());
+    categoriesSteps = new CategoriesSteps(driverManager.get());
   }
 
   //TODO: Do a screenshot at the end upon test failure. Hint: @AfterMethod + Allure. done+
