@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 /**
  * Login functionality related steps.
  */
-public class LoginSteps extends BaseSteps {
+public class LoginSteps extends BaseSteps{
 
   public LoginSteps(WebDriver driver) {
     super(driver);
@@ -59,4 +59,5 @@ public class LoginSteps extends BaseSteps {
   private LoginPage page() {
     return getPage(LoginPage.class);
   }
+
 }
