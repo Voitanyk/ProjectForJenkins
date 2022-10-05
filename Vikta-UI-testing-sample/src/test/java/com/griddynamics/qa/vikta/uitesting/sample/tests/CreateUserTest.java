@@ -6,12 +6,14 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class CreateUserTest extends BaseTest {
+
   String loginName;
+
   @BeforeMethod
-  public void setUp(){
+  public void setUp() {
     loginSteps.openLoginPage();
     loginSteps.loginAsAdmin();
-    createUserPageSteps.clickCreateUser();
+    homePageSteps.clickCreateUser();
     loginName = registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.LOGINNAME);
     registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.EMAIL);
     registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.FIRSTNAME);

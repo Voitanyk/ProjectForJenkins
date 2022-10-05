@@ -20,42 +20,18 @@ public class CreateUserPage extends BasePage {
   @FindBy(id = "lMiddleName")
   private WebElement lMiddleName;
 
-  @FindBy(xpath = "//*[@id=\"divMsgOrErr\"]/span")
+  @FindBy(xpath = "//*[@id=\'divMsgOrErr\']/span")
   private WebElement successUserCreationMessage;
 
-  @FindBy(xpath = "//*[@id=\"lPassword\"]")
+  @FindBy(xpath = "//*[@id=\'lPassword\']")
   private WebElement errorPasswordMessage;
 
-  /* @FindBy(id = "tbLoginName")
-    private WebElement tbLoginName;
-
-    @FindBy(id = "tbSurname")
-    private WebElement tbSurname;
-
-    @FindBy(id = "tbFirstName")
-    private WebElement tbFirstName;
-
-    @FindBy(id = "tbMiddleName")
-    private WebElement tbMiddleName;
 
     //TODO: Add missing elements.+
 
-    @FindBy(id = "tbEmail")
-    private WebElement tbEmail;
-
-    @FindBy(id = "tbPassword")
-    private WebElement tbPassword;*/
 
   public void clickSaveTheChanges() {
     btnSave.click();
-  }
-
-  public void clickAddUser() {
-    aAddUser.click();
-  }
-
-  public WebElement addUser() {
-    return aAddUser;
   }
 
   public WebElement ErrorPasswordMessage() {

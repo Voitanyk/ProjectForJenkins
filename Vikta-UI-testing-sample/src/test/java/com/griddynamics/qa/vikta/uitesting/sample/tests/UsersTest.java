@@ -5,38 +5,38 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class UsersTest extends BaseTest {
-    String loginName;
-    String email;
-    @BeforeMethod
-    public void setup() {
-        loginSteps.openLoginPage();
-        loginSteps.loginAsAdmin();
-        createUserPageSteps.clickCreateUser();
-        loginName = registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.LOGINNAME);
-        registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.PASSWORD);
-        email = registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.EMAIL);
-        registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.SURNAME);
-        registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.FIRSTNAME);
-        registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.PATRONIM);
-        createUserPageSteps.clickSaveTheChangesButton();
-        usersPageSteps.openUsersPage();
-    }
 
-    @Test
-    public void testThatTheUserWasAddedToTheUsersList(){
-        usersPageSteps.verifyThatUserIsAdded(loginName);
-    }
+  String loginName;
+  String email;
 
-    @Test
-    public void testThatTheUserWasDeletedFromTheUsersList(){
-        usersPageSteps.verifyThatUserIsDeleted(loginName);
-    }
+  @BeforeMethod
+  public void setup() {
+    loginSteps.openLoginPage();
+    loginSteps.loginAsAdmin();
+    homePageSteps.clickCreateUser();
+    loginName = registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.LOGINNAME);
+    registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.PASSWORD);
+    email = registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.EMAIL);
+    registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.SURNAME);
+    registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.FIRSTNAME);
+    registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.PATRONIM);
+    createUserPageSteps.clickSaveTheChangesButton();
+    usersPageSteps.openUsersPage();
+  }
 
-    @Test
-    public void testUserSearchResult(){
-        usersPageSteps.specifyUserDetailsInTheSearchField(email,loginName);
-        usersPageSteps.verifyTheSearchResults(loginName, email);
-    }
+  @Test
+  public void testThatTheUserWasAddedToTheUsersList() {
+    usersPageSteps.verifyThatUserIsAdded(loginName);
+  }
 
+  @Test
+  public void testThatTheUserWasDeletedFromTheUsersList() {
+    usersPageSteps.verifyThatUserIsDeleted(loginName);
+  }
 
+  @Test
+  public void testUserSearchResult() {
+    usersPageSteps.specifyUserDetailsInTheSearchField(email, loginName);
+    usersPageSteps.verifyTheSearchResults(loginName, email);
+  }
 }

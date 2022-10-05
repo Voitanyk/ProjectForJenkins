@@ -3,75 +3,79 @@ package com.griddynamics.qa.vikta.uitesting.sample.pageObjects;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class AddCategoryPage extends BasePage{
-    @FindBy(id = "tbTitle")
-    private WebElement tbTitle;
+public class AddCategoryPage extends BasePage {
 
-    public WebElement titleField(){
-        return tbTitle;
-    }
+  @FindBy(id = "tbTitle")
+  private WebElement tbTitle;
 
-    public void clickInTitleField(){
-        tbTitle.click();
-    }
-    @FindBy (xpath = "//*[@id=\"divMsgOrErr\"]/span")
-    private WebElement categoryCreatedMessage;
+  public WebElement titleField() {
+    return tbTitle;
+  }
 
-    @FindBy(id = "tbDescription")
-    private WebElement tbDescription;
+  public void clickInTitleField() {
+    tbTitle.click();
+  }
 
-    public WebElement descriptionField(){
-        return tbDescription;
-    }
+  @FindBy(xpath = "//*[@id=\'divMsgOrErr\']/span")
+  private WebElement categoryCreatedMessage;
 
-    public void clickInDescriptionField(){
-        tbDescription.click();
-    }
-    @FindBy(id = "tbPathToCatImage")
-    private WebElement tbPathToCatImage;
+  @FindBy(id = "tbDescription")
+  private WebElement tbDescription;
 
-    public WebElement pathField(){
-        return tbPathToCatImage;
-    }
+  public WebElement descriptionField() {
+    return tbDescription;
+  }
 
-    public void clickInPathToImageField(){
-        tbPathToCatImage.click();
-    }
-    @FindBy(id = "btnSave")
-    private WebElement btnSave;
+  @FindBy(id = "tbPathToCatImage")
+  private WebElement tbPathToCatImage;
 
-    public void clickSaveButton(){
-        btnSave.click();
-    }
-    @FindBy(id = "aBack")
-    private WebElement aBack;
+  public WebElement pathField() {
+    return tbPathToCatImage;
+  }
 
-    public void clickToTheListOfCategoriesButton(){
-        aBack.click();
-    }
+  public void clickInPathToImageField() {
+    tbPathToCatImage.click();
+  }
 
-    @FindBy(id = "btnReset")
-    private WebElement btnReset;
+  @FindBy(id = "btnSave")
+  private WebElement btnSave;
 
-    public void clickResetButton(){
-        btnReset.click();
-    }
-    public void typeInTitle(String value) {
-        typeIn(value, tbTitle);
-    }
+  public void clickSaveButton() {
+    btnSave.click();
+  }
 
-    public WebElement categoryCreatedMessage(){
-        return categoryCreatedMessage;
-    }
-    public void typeInDescription(String value) {
-        typeIn(value, tbDescription);
-    }
-    public void typeInPathToImage(String value) {
-        typeIn(value, tbPathToCatImage);
-    }
-    private void typeIn(String value, WebElement targetElement) {
-        targetElement.clear();
-        targetElement.sendKeys(value);
-    }
+  @FindBy(id = "aBack")
+  private WebElement aBack;
 
+  public void clickToTheListOfCategoriesButton() {
+    aBack.click();
+  }
+
+  @FindBy(id = "btnReset")
+  private WebElement btnReset;
+
+  public void clickResetButton() {
+    btnReset.click();
+  }
+
+  public void typeInTitle(String value) {
+    typeIn(value, tbTitle);
+  }
+
+  public WebElement categoryCreatedMessage() {
+    return categoryCreatedMessage;
+  }
+
+  public void typeInDescription(String value) {
+    typeIn(value, tbDescription);
+  }
+
+  public void typeInPathToImage(String value) {
+    typeIn(value, tbPathToCatImage);
+  }
+
+  private void typeIn(String value, WebElement targetElement) {
+    targetElement.clear();
+    targetElement.sendKeys(value);
+  }
 }

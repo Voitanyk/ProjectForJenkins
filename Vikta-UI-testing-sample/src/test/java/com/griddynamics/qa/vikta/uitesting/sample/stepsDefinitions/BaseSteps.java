@@ -2,18 +2,15 @@ package com.griddynamics.qa.vikta.uitesting.sample.stepsDefinitions;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.codeborne.selenide.WebDriverRunner;
 import com.griddynamics.qa.vikta.uitesting.sample.config.DataProvider;
 import com.griddynamics.qa.vikta.uitesting.sample.config.RandomData;
 import com.griddynamics.qa.vikta.uitesting.sample.config.TestDataAndProperties;
 import com.griddynamics.qa.vikta.uitesting.sample.pageObjects.BasePage;
 import java.util.Objects;
-import java.util.UUID;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
 /**
  * Base class to contain common auxiliary methods for step definitions.
@@ -55,15 +52,15 @@ abstract class BaseSteps {
     assertThat(currentPage.getCurrentUserName())
       .as("Unexpected current user's name displayed. Expected: %s", username)
       .contains(username);
-    //TODO: Assert displayed role as well.done+
+    // TODO: Assert displayed role as well.done+
     assertThat(currentPage.getUserRole()).as(username).contains(role);
   }
 
   void assertCurrentPageUrl(String expectedUrl, String messageOnFail) {
     assertThat(getDriver().getCurrentUrl()).as(messageOnFail).contains(expectedUrl);
   }
-  //TODO: Make static and move to some Utils.done+
-  //TODO: Use something like JavaFaker.done+
+  // TODO: Make static and move to some Utils.done+
+  // TODO: Use something like JavaFaker.done+
 
   /* private String generateRandomString(int maxLength) {
     String candidate = UUID.randomUUID().toString().replaceAll("\\d", "A");

@@ -54,7 +54,7 @@ public class RegistrationTest extends BaseTest {
    * Scenario: Guest user is NOT able to register regular user account using some existing user account's name
    */
   //The test testImpossibleToReUseEmailForRegistration() fails because there is a bug on the website as it's possible to register a new user with the existing email address
-  @Test (enabled = false)
+  @Test(enabled = false)
   public void testImpossibleToReUseEmailForRegistration() {
     //# TODO: Develop the rest of the scenario. +
     registrationSteps.openRegistrationPage();

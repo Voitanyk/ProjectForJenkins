@@ -30,8 +30,15 @@ public interface TestDataAndProperties extends Config {
   String createUserPageUrl();
   String avatarPicture();
   String usersPageUrl();
-  String userEmail();
   String addCategoryPageUrl();
   String categoriesPageUrl();
   String categoryPicture();
+  String addImagePageUrl();
+  String imagePageUrl();
+  String hutPageUrl();
+  String regularUserAddCardPageUrl();
+  String regularUserCardsPageUrl();
+  String adminCardsPageUrl();
+  String addAddressPageUrl();
+  String addressesPageUrl();
 }

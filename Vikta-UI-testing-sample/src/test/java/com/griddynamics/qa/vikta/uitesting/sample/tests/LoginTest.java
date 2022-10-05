@@ -1,5 +1,7 @@
 package com.griddynamics.qa.vikta.uitesting.sample.tests;
 
+import com.griddynamics.qa.vikta.uitesting.sample.stepsDefinitions.LoginSteps;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 

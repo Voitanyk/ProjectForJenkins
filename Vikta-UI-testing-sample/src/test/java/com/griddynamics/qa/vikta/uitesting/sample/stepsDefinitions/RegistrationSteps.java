@@ -14,11 +14,11 @@ import org.testng.Assert;
  */
 public class RegistrationSteps extends BaseSteps {
 
-//  RandomData randomData = new RandomData();
+  //  RandomData randomData = new RandomData();
 
-  private static String SUCCESSFUL_REGISTRATION_MESSAGE_PREFIX =
+  final static String SUCCESSFUL_REGISTRATION_MESSAGE_PREFIX =
     "User has been registered successfully: ";
-  private static String UNSUCCESSFUL_REGISTRATION_MESSAGE_PREFIX =
+  final static String UNSUCCESSFUL_REGISTRATION_MESSAGE_PREFIX =
     "There is already a user registered with";
 
   public RegistrationSteps(WebDriver driver) {
