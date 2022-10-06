@@ -44,7 +44,7 @@ public class HutTests extends BaseTest {
   }
 
   @Test
-  public void testButtonOpensPage() {
+  public void testCreateUserButtonOpensCreateUserPage() {
     hutPageSteps.clickCreateUserButton();
     hutPageSteps.verifyThatNeededPageIsOpened(HutPageSteps.PageName.CREATEUSER);
   }

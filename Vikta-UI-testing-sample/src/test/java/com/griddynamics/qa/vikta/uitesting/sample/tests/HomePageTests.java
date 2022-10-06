@@ -42,7 +42,7 @@ public class HomePageTests extends BaseTest {
   }
 
   @Test
-  public void testImageSearchResults() {
+  public void testImageSearchResultsOnTheHomePage() {
     loginSteps.openLoginPage();
     loginSteps.loginAsRegularUser();
     homePageSteps.fillInTheSearchField(imageName);
