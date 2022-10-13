@@ -1,5 +1,7 @@
 package com.griddynamics.qa.vikta.uitesting.sample.tests;
 
+import com.griddynamics.qa.vikta.uitesting.sample.stepsDefinitions.LoginSteps;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -31,10 +33,8 @@ public class LoginTest extends BaseTest {
   public void testRegularUserIsAbleToLogin() {
     // Given user opens Login page
     loginSteps.openLoginPage();
-
     // When user logins as regular user
     loginSteps.loginAsRegularUser();
-
     // Then Home is displayed for the regular user
     loginSteps.verifyCurrentPageIsHomePageForTheRegularUser();
   }
@@ -46,10 +46,8 @@ public class LoginTest extends BaseTest {
   public void testAdminUserIsAbleToLogin() {
     // Given user opens Login page
     loginSteps.openLoginPage();
-
     // When user logins as ADMIN user
     loginSteps.loginAsAdmin();
-
     // Then Home is displayed for the ADMIN user
     loginSteps.verifyCurrentPageIsHomePageForTheAdmin();
   }

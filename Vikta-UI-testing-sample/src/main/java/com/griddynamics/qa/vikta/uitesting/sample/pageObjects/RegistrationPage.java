@@ -24,6 +24,7 @@ public class RegistrationPage extends BasePage {
 
   @FindBy(id = "tbEmail")
   private WebElement tbEmail;
+
   @FindBy(id = "tbPassword")
   private WebElement tbPassword;
 
@@ -36,6 +37,9 @@ public class RegistrationPage extends BasePage {
   //TODO: Add [Register User] button support.+
   @FindBy(id = "btnRegister")
   private WebElement btnRegister;
+
+  @FindBy(className = "validation-message")
+  private WebElement validationMessage;
 
   public void typeInLoginname(String value) {
     typeIn(value, tbLoginName);
@@ -52,13 +56,18 @@ public class RegistrationPage extends BasePage {
   public void typeInPatronim(String value) {
     typeIn(value, tbMiddleName);
   }
+
   public void typeInEmail(String value) {
     typeIn(value, tbEmail);
   }
+
   public void typeInPassword(String value) {
     typeIn(value, tbPassword);
   }
-  public void clickButtonRegister() { btnRegister.click();}
+
+  public void clickButtonRegister() {
+    btnRegister.click();
+  }
 
   private void typeIn(String value, WebElement targetElement) {
     targetElement.clear();
@@ -67,6 +76,10 @@ public class RegistrationPage extends BasePage {
 
   public String getMessageText() {
     return tSuccessMessage.getText();
+  }
+
+  public String getValidationMessageText() {
+    return validationMessage.getText();
   }
 
   public WebElement getMessageWebElement() {

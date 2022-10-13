@@ -6,6 +6,7 @@ import com.griddynamics.qa.vikta.uitesting.sample.pageObjects.LoginPage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * Login functionality related steps.
@@ -38,12 +39,12 @@ public class LoginSteps extends BaseSteps {
 
   @Step
   public void verifyCurrentPageIsHomePageForTheRegularUser() {
-    verifyCurrentPageIsHomePageForTheUser(getData().userName());
+    verifyCurrentPageIsHomePageForTheUser(getData().userName(), getData().userRole());
   }
 
   @Step
   public void verifyCurrentPageIsHomePageForTheAdmin() {
-    verifyCurrentPageIsHomePageForTheUser(getData().adminName());
+    verifyCurrentPageIsHomePageForTheUser(getData().adminName(), getData().adminRole());
   }
 
   @Step

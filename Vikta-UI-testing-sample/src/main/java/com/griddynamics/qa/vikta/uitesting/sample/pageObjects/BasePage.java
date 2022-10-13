@@ -20,71 +20,31 @@ public class BasePage {
   @FindBy(id = "sploggedInName")
   private WebElement sploggedInName;
 
-  @FindBy(id = "aLogoutTop")
-  private WebElement aLogoutTop;
-
-  @FindBy(id = "aHome")
-  private WebElement aHome;
-
-  @FindBy(id = "aAddresses")
-  private WebElement aAddresses;
-
-  @FindBy(id = "aAddAddress")
-  private WebElement aAddAddress;
-
-  @FindBy(id = "aCards")
-  private WebElement aCards;
-
-  @FindBy(id = "aAddCards")
-  private WebElement aAddCards;
-
-  @FindBy(id = "aEditProfile")
-  private WebElement aEditProfile;
-
-  @FindBy(id = "navbar")
-  private WebElement navbar;
-
-  @FindBy(id = "aLogoutBottom")
-  private WebElement aLogoutBottom;
-
-  @FindBy(id = "tbTerm")
-  private WebElement tbTerm;
-
   @FindBy(id = "btnSearch")
   private WebElement btnSearch;
 
   @FindBy(id = "btnResetSearchCriteria")
   private WebElement btnResetSearchCriteria;
 
-  @FindBy(id = "aRegistration")
-  private WebElement aRegistration;
-
-  @FindBy(id = "aLogin")
-  private WebElement aLogin;
+  @FindBy(xpath = "//*[@id=\'navbar\']/ul[2]/li/span/span[2]")
+  private WebElement userRole;
 
   public String getCurrentUserName() {
     return sploggedInName.getText();
+  }
+
+  public String getUserRole() {
+    return userRole.getText();
   }
 
   public WebElement getLoggedInName() {
     return sploggedInName;
   }
 
-  public void clickLogout() {
-    aLogoutTop.click();
+  public void clickSearchButton() {
+    btnSearch.click();
   }
-
-  public void clickAddresses() { aAddresses.click();}
-  public void clickAddAddresses() { aAddAddress.click();}
-  public void clickCards() { aCards.click();}
-  public void clickAddCards() { aAddCards.click();}
-  public void clickEditProfile() { aEditProfile.click();}
-  public void clickNavbar() { navbar.click();}
-  public void clickLogoutBottom() { aLogoutBottom.click();}
-  public void clickInSearchField() { tbTerm.click();}
-  public void clickSearchButton() { btnSearch.click();}
-  public void clickResetButton() { btnResetSearchCriteria.click();}
-  public void clickSignUpButton() { aRegistration.click();}
-  public void clickLoginButton() { aLogin.click();}
-
+  public void clickResetButton() {
+    btnResetSearchCriteria.click();
+  }
 }

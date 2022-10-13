@@ -7,15 +7,19 @@ import com.griddynamics.qa.vikta.uitesting.sample.pageObjects.RegistrationPage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 
 /**
  * Registration functionality related steps.
  */
 public class RegistrationSteps extends BaseSteps {
-  RandomData randomData = new RandomData();
 
-  private static String SUCCESSFUL_REGISTRATION_MESSAGE_PREFIX =
+  //  RandomData randomData = new RandomData();
+
+  final static String SUCCESSFUL_REGISTRATION_MESSAGE_PREFIX =
     "User has been registered successfully: ";
+  final static String UNSUCCESSFUL_REGISTRATION_MESSAGE_PREFIX =
+    "There is already a user registered with";
 
   public RegistrationSteps(WebDriver driver) {
     super(driver);
@@ -62,6 +66,7 @@ public class RegistrationSteps extends BaseSteps {
       case EMAIL:
         valueToReturn = randomData.generateRandomEmail();
         page().typeInEmail(valueToReturn);
+        break;
       //TODO: Add the rest... . +
       default:
         throw new IllegalArgumentException(
@@ -72,10 +77,26 @@ public class RegistrationSteps extends BaseSteps {
     return valueToReturn;
   }
 
-  //TODO: Add rest of the steps needed.
+  // TODO: Add rest of the steps needed.+
+  @Step
+  public void typeExistingLoginName() {
+    page().typeInLoginname(getData().userName());
+  }
 
   @Step
-  public void clickRegisterButton(){
+  public void typeExistingEmail() {
+    page().typeInEmail(getData().existingEmail());
+  }
+
+  @Step
+  public void verifyFailMessage() {
+    assertThat(
+      page().getValidationMessageText().startsWith(UNSUCCESSFUL_REGISTRATION_MESSAGE_PREFIX)
+    );
+  }
+
+  @Step
+  public void clickRegisterButton() {
     page().clickButtonRegister();
   }
 
@@ -108,5 +129,4 @@ public class RegistrationSteps extends BaseSteps {
   private RegistrationPage page() {
     return getPage(RegistrationPage.class);
   }
-
 }
