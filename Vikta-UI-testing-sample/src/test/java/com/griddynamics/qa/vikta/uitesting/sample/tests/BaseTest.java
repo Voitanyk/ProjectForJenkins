@@ -21,11 +21,7 @@ public class BaseTest {
   UsersPageSteps usersPageSteps;
   AddCategorySteps addCategorySteps;
   CategoriesSteps categoriesSteps;
-  AddImageSteps addImageSteps;
-  ImagesSteps imagesSteps;
   HutPageSteps hutPageSteps;
-  AddCardSteps addCardSteps;
-  CardsSteps cardsSteps;
   AddAddressSteps addAddressSteps;
   AddressesSteps addressesSteps;
 
@@ -55,11 +51,7 @@ public class BaseTest {
     usersPageSteps = new UsersPageSteps(driverManager.get());
     addCategorySteps = new AddCategorySteps(driverManager.get());
     categoriesSteps = new CategoriesSteps(driverManager.get());
-    addImageSteps = new AddImageSteps(driverManager.get());
-    imagesSteps = new ImagesSteps(driverManager.get());
     hutPageSteps = new HutPageSteps(driverManager.get());
-    addCardSteps = new AddCardSteps(driverManager.get());
-    cardsSteps = new CardsSteps(driverManager.get());
     addAddressSteps = new AddAddressSteps(driverManager.get());
     addressesSteps = new AddressesSteps(driverManager.get());
   }

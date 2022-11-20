@@ -13,17 +13,6 @@ public class HutTests extends BaseTest {
     hutPageSteps.openHutPage();
   }
 
-  @Test
-  public void testCategoriesButtonOpensCategoriesPage() {
-    hutPageSteps.clickCategoriesButton();
-    hutPageSteps.verifyThatNeededPageIsOpened(HutPageSteps.PageName.CATEGORIES);
-  }
-
-  @Test
-  public void testAddCategoryButtonOpensAddCategoryPage() {
-    hutPageSteps.clickAddCategoryButton();
-    hutPageSteps.verifyThatNeededPageIsOpened(HutPageSteps.PageName.ADDCATEGORY);
-  }
 
   @Test
   public void testImageItemsButtonOpensImageItemsPage() {

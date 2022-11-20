@@ -33,13 +33,6 @@ public class AddCategoryTest extends BaseTest {
   }
 
   @Test
-  public void testEnteredTextIsDisplayedInTheFields() {
-    addCategorySteps.verifyThatEnteredTestIsDisplayedInTheField(AddCategorySteps.FieldName.TITLE, enteredTitle);
-    addCategorySteps.verifyThatEnteredTestIsDisplayedInTheField(AddCategorySteps.FieldName.DESCRIPTION, enteredDescription);
-    addCategorySteps.verifyThatEnteredTestIsDisplayedInTheField(AddCategorySteps.FieldName.PATH, enteredPath);
-  }
-
-  @Test
   public void testResetButtonMakesTheFieldsEmpty() {
     addCategorySteps.clickResetButton();
     addCategorySteps.verifyThatTheFieldIsEmpty(AddCategorySteps.FieldName.TITLE);

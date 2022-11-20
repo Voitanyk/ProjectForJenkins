@@ -29,11 +29,4 @@ public class CategoriesTest extends BaseTest {
     categoriesSteps.verifyThatCategoryIsAddedToTheList(enteredTitle, enteredDescription);
   }
 
-  @Test
-  public void testResetSearchButton() {
-    categoriesSteps.openCategoriesPage();
-    categoriesSteps.typeRandomValueInSearchField();
-    categoriesSteps.clickResetButton();
-    categoriesSteps.verifyThatTheSearchFieldIsEmpty();
-  }
 }

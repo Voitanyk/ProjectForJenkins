@@ -38,11 +38,4 @@ public class CreateUserTest extends BaseTest {
     createUserPageSteps.verifyThatPasswordIsMissing();
   }
 
-  @Test
-  public void testWarningMessagesAreDisplayedForEmptyFields() {
-    createUserPageSteps.clickSaveTheChangesButton();
-    createUserPageSteps.verifyThatWarningMessageIsDisplayed(CreateUserPageSteps.FieldName.SURNAME);
-    createUserPageSteps.verifyThatWarningMessageIsDisplayed(CreateUserPageSteps.FieldName.PASSWORD);
-    createUserPageSteps.verifyThatWarningMessageIsDisplayed(CreateUserPageSteps.FieldName.PATRONIM);
-  }
 }

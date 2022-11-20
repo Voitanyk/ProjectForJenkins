@@ -30,17 +30,6 @@ public class AddressTests extends BaseTest {
     addAddressSteps.verifyThatSuccessDeleteMessageIsDisplayed();
   }
 
-  @Test
-  public void testUserCanUpdateAddress() {
-    addAddressSteps.clickSaveButton();
-    addressesSteps.openAddressesPage();
-    addressesSteps.verifyAddressIsAddedToTheList(addressName);
-    addressesSteps.clickOnTheCreatedAddress(addressName);
-    addAddressSteps.editCityField();
-    addAddressSteps.clickSaveButton();
-    addAddressSteps.verifyThatSuccessUpdateMessageIsDisplayed();
-    addAddressSteps.clickDeleteButton();
-  }
 
   @Test
   public void testToTheListOfAddressesButtonLeadsToAddressesPage() {

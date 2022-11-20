@@ -34,9 +34,4 @@ public class UsersTest extends BaseTest {
     usersPageSteps.verifyThatUserIsDeleted(loginName);
   }
 
-  @Test
-  public void testUserSearchResult() {
-    usersPageSteps.specifyUserDetailsInTheSearchField(email, loginName);
-    usersPageSteps.verifyTheSearchResults(loginName, email);
-  }
 }
