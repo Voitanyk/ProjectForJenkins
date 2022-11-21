@@ -36,8 +36,7 @@ public class RegistrationTest extends BaseTest {
     registrationSteps.verifySuccessfulRegistrationMessageIsDisplayed();
     // TODO: Develop the rest of the scenario. E.g. login as new user etc.
   }
-
- /* @Test
+  /* @Test
   public void testImpossibleToReUseLoginNameForRegistration() {
     registrationSteps.openRegistrationPage();
     registrationSteps.typeExistingLoginName();

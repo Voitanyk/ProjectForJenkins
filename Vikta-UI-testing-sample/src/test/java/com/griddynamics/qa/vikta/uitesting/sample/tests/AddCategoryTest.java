@@ -20,12 +20,12 @@ public class AddCategoryTest extends BaseTest {
     enteredPath = addCategorySteps.fillInTheField(AddCategorySteps.FieldName.PATH);
   }
 
-  @Test
+ /* @Test
   public void testAdminCanCreateCategory() {
     addCategorySteps.clickSaveButton();
     addCategorySteps.verifyMessageOfCategoryCreation();
   }
-  /* @Test
+   @Test
   public void testResetButtonMakesTheFieldsEmpty() {
     addCategorySteps.clickResetButton();
     addCategorySteps.verifyThatTheFieldIsEmpty(AddCategorySteps.FieldName.TITLE);

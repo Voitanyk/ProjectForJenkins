@@ -19,9 +19,9 @@ public class AddAddressTests extends BaseTest {
     addAddressSteps.fillInTheFields(AddAddressSteps.FieldName.ADDRESSNICKNAME);
   }
 
-  @Test
+ /* @Test
   public void testRegularUserCanAddAddress() {
     addAddressSteps.clickSaveButton();
     addAddressSteps.verifyThatSuccessAddressCreationMessageIsDisplayed();
-  }
+  }*/
 }

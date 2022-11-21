@@ -21,7 +21,7 @@ public class AddressTests extends BaseTest {
     addAddressSteps.fillInTheFields(AddAddressSteps.FieldName.ADDRESSNICKNAME);
   }
 
-  @Test
+ /* @Test
   public void testUserCanDeleteAddress() {
     addAddressSteps.clickSaveButton();
     addressesSteps.openAddressesPage();
@@ -29,7 +29,7 @@ public class AddressTests extends BaseTest {
     addAddressSteps.clickDeleteButton();
     addAddressSteps.verifyThatSuccessDeleteMessageIsDisplayed();
   }
-  /*  @Test
+    @Test
   public void testToTheListOfAddressesButtonLeadsToAddressesPage() {
     loginSteps.openLoginPage();
     loginSteps.loginAsRegularUser();
