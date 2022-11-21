@@ -41,7 +41,7 @@ public class LoginTest extends BaseTest {
   /**
    * Scenario: Admin user is able to login
    */
-  /* @Test(groups = { "smoke", "login" })
+   @Test(groups = { "smoke", "login" })
   public void testAdminUserIsAbleToLogin() {
     // Given user opens Login page
     loginSteps.openLoginPage();
@@ -49,12 +49,12 @@ public class LoginTest extends BaseTest {
     loginSteps.loginAsAdmin();
     // Then Home is displayed for the ADMIN user
     loginSteps.verifyCurrentPageIsHomePageForTheAdmin();
-  }*/
+  }
 
   /**
    * Scenario Outline: Cannon login using invalid username and/or password
    */
-  /* @Test(groups = { "smoke", "login", "invalid" }, dataProvider = "invalidLoginDataCases")
+   @Test(groups = { "smoke", "login", "invalid" }, dataProvider = "invalidLoginDataCases")
   public void testInvalidCredentialsNotAbleToLogin(String name, String password) {
     // Given user opens Login page
     loginSteps.openLoginPage();
@@ -64,5 +64,5 @@ public class LoginTest extends BaseTest {
 
     // Then login error message ... is displayed.
     loginSteps.verifyErrorMessage("Login name or Password invalid, please verify");
-  }*/
+  }
 }

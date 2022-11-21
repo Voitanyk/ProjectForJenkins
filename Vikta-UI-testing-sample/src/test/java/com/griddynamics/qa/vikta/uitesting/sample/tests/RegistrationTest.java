@@ -10,11 +10,10 @@ import org.testng.annotations.Test;
  *   I should be able to register new user account(sign-up) and use it to login into the application
  */
 public class RegistrationTest extends BaseTest {
-
   /**
    * Scenario: Regular user is able to login
    */
- /* @Test(groups = { "smoke", "signup" })
+   @Test(groups = { "smoke", "signup" })
   public void testRegularUserIsAbleToRegister() {
     // Given user opens Registration page
     registrationSteps.openRegistrationPage();
@@ -47,13 +46,13 @@ public class RegistrationTest extends BaseTest {
     registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.PASSWORD);
     registrationSteps.clickRegisterButton();
     registrationSteps.verifyFailMessage();
-  }*/
+  }
 
   /**
    * Scenario: Guest user is NOT able to register regular user account using some existing user account's name
    */
   //The test testImpossibleToReUseEmailForRegistration() fails because there is a bug on the website as it's possible to register a new user with the existing email address
-  /* @Test(enabled = false)
+   @Test(enabled = false)
   public void testImpossibleToReUseEmailForRegistration() {
     //# TODO: Develop the rest of the scenario. +
     registrationSteps.openRegistrationPage();
@@ -65,5 +64,5 @@ public class RegistrationTest extends BaseTest {
     registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.PASSWORD);
     registrationSteps.clickRegisterButton();
     registrationSteps.verifyFailMessage();
-  }*/
+  }
 }

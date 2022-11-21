@@ -19,7 +19,7 @@ public class AddCategoryTest extends BaseTest {
     enteredDescription = addCategorySteps.fillInTheField(AddCategorySteps.FieldName.DESCRIPTION);
     enteredPath = addCategorySteps.fillInTheField(AddCategorySteps.FieldName.PATH);
   }
-  /* @Test
+   @Test
   public void testAdminCanCreateCategory() {
     addCategorySteps.clickSaveButton();
     addCategorySteps.verifyMessageOfCategoryCreation();
@@ -30,5 +30,5 @@ public class AddCategoryTest extends BaseTest {
     addCategorySteps.verifyThatTheFieldIsEmpty(AddCategorySteps.FieldName.TITLE);
     addCategorySteps.verifyThatTheFieldIsEmpty(AddCategorySteps.FieldName.DESCRIPTION);
     addCategorySteps.verifyThatTheFieldIsEmpty(AddCategorySteps.FieldName.PATH);
-  }*/
+  }
 }
