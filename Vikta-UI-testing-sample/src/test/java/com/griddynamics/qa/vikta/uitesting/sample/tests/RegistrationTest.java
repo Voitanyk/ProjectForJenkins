@@ -14,7 +14,7 @@ public class RegistrationTest extends BaseTest {
   /**
    * Scenario: Regular user is able to login
    */
-  @Test(groups = { "smoke", "signup" })
+ /* @Test(groups = { "smoke", "signup" })
   public void testRegularUserIsAbleToRegister() {
     // Given user opens Registration page
     registrationSteps.openRegistrationPage();
@@ -36,7 +36,7 @@ public class RegistrationTest extends BaseTest {
     registrationSteps.verifySuccessfulRegistrationMessageIsDisplayed();
     // TODO: Develop the rest of the scenario. E.g. login as new user etc.
   }
-  /* @Test
+   @Test
   public void testImpossibleToReUseLoginNameForRegistration() {
     registrationSteps.openRegistrationPage();
     registrationSteps.typeExistingLoginName();

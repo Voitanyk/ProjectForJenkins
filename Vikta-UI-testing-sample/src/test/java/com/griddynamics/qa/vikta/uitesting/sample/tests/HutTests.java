@@ -13,7 +13,7 @@ public class HutTests extends BaseTest {
     hutPageSteps.openHutPage();
   }
 
-  @Test
+ /* @Test
   public void testUsersButtonOpensUsersPage() {
     hutPageSteps.clickUsersButton();
     hutPageSteps.verifyThatNeededPageIsOpened(HutPageSteps.PageName.USERS);
