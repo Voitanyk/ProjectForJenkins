@@ -18,8 +18,7 @@ public class CreateUserTest extends BaseTest {
     registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.EMAIL);
     registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.FIRSTNAME);
   }
-
- /* @Test
+  /* @Test
   public void testAdminCanCreateNewUser() {
     registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.PASSWORD);
     registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.SURNAME);

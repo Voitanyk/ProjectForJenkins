@@ -19,8 +19,7 @@ public class AddCategoryTest extends BaseTest {
     enteredDescription = addCategorySteps.fillInTheField(AddCategorySteps.FieldName.DESCRIPTION);
     enteredPath = addCategorySteps.fillInTheField(AddCategorySteps.FieldName.PATH);
   }
-
- /* @Test
+  /* @Test
   public void testAdminCanCreateCategory() {
     addCategorySteps.clickSaveButton();
     addCategorySteps.verifyMessageOfCategoryCreation();

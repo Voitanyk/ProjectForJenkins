@@ -23,8 +23,7 @@ public class UsersTest extends BaseTest {
     createUserPageSteps.clickSaveTheChangesButton();
     usersPageSteps.openUsersPage();
   }
-
- /* @Test
+  /* @Test
   public void testThatTheUserWasDeletedFromTheUsersList() {
     usersPageSteps.verifyThatUserIsDeleted(loginName);
   }

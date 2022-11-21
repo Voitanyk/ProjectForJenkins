@@ -20,8 +20,7 @@ public class AddressTests extends BaseTest {
     addAddressSteps.fillInTheFields(AddAddressSteps.FieldName.POSTALCODE);
     addAddressSteps.fillInTheFields(AddAddressSteps.FieldName.ADDRESSNICKNAME);
   }
-
- /* @Test
+  /* @Test
   public void testUserCanDeleteAddress() {
     addAddressSteps.clickSaveButton();
     addressesSteps.openAddressesPage();
