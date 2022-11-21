@@ -25,12 +25,11 @@ public class AddCategoryTest extends BaseTest {
     addCategorySteps.clickSaveButton();
     addCategorySteps.verifyMessageOfCategoryCreation();
   }
-
-  @Test
+  /* @Test
   public void testResetButtonMakesTheFieldsEmpty() {
     addCategorySteps.clickResetButton();
     addCategorySteps.verifyThatTheFieldIsEmpty(AddCategorySteps.FieldName.TITLE);
     addCategorySteps.verifyThatTheFieldIsEmpty(AddCategorySteps.FieldName.DESCRIPTION);
     addCategorySteps.verifyThatTheFieldIsEmpty(AddCategorySteps.FieldName.PATH);
-  }
+  }*/
 }

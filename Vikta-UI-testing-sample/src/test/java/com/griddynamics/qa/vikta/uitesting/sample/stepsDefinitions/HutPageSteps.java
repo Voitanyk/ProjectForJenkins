@@ -2,6 +2,7 @@ package com.griddynamics.qa.vikta.uitesting.sample.stepsDefinitions;
 
 import static com.codeborne.selenide.Selenide.open;
 import static org.testng.AssertJUnit.assertEquals;
+import static org.testng.AssertJUnit.assertFalse;
 
 import com.codeborne.selenide.Selenide;
 import com.griddynamics.qa.vikta.uitesting.sample.pageObjects.HutPage;

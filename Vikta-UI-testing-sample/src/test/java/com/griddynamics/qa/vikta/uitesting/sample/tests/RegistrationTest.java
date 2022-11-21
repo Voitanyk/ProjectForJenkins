@@ -37,7 +37,7 @@ public class RegistrationTest extends BaseTest {
     // TODO: Develop the rest of the scenario. E.g. login as new user etc.
   }
 
-  @Test
+ /* @Test
   public void testImpossibleToReUseLoginNameForRegistration() {
     registrationSteps.openRegistrationPage();
     registrationSteps.typeExistingLoginName();
@@ -48,13 +48,13 @@ public class RegistrationTest extends BaseTest {
     registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.PASSWORD);
     registrationSteps.clickRegisterButton();
     registrationSteps.verifyFailMessage();
-  }
+  }*/
 
   /**
    * Scenario: Guest user is NOT able to register regular user account using some existing user account's name
    */
   //The test testImpossibleToReUseEmailForRegistration() fails because there is a bug on the website as it's possible to register a new user with the existing email address
-  @Test(enabled = false)
+  /* @Test(enabled = false)
   public void testImpossibleToReUseEmailForRegistration() {
     //# TODO: Develop the rest of the scenario. +
     registrationSteps.openRegistrationPage();
@@ -66,5 +66,5 @@ public class RegistrationTest extends BaseTest {
     registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.PASSWORD);
     registrationSteps.clickRegisterButton();
     registrationSteps.verifyFailMessage();
-  }
+  }*/
 }

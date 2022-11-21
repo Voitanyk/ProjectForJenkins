@@ -13,16 +13,14 @@ public class HutTests extends BaseTest {
     hutPageSteps.openHutPage();
   }
 
-
   @Test
   public void testUsersButtonOpensUsersPage() {
     hutPageSteps.clickUsersButton();
     hutPageSteps.verifyThatNeededPageIsOpened(HutPageSteps.PageName.USERS);
   }
-
-  @Test
+  /* @Test
   public void testCreateUserButtonOpensCreateUserPage() {
     hutPageSteps.clickCreateUserButton();
     hutPageSteps.verifyThatNeededPageIsOpened(HutPageSteps.PageName.CREATEUSER);
-  }
+  }*/
 }

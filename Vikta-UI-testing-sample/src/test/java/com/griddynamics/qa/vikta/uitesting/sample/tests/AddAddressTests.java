@@ -24,5 +24,4 @@ public class AddAddressTests extends BaseTest {
     addAddressSteps.clickSaveButton();
     addAddressSteps.verifyThatSuccessAddressCreationMessageIsDisplayed();
   }
-
 }

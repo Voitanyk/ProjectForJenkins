@@ -29,13 +29,12 @@ public class AddressTests extends BaseTest {
     addAddressSteps.clickDeleteButton();
     addAddressSteps.verifyThatSuccessDeleteMessageIsDisplayed();
   }
-
-  @Test
+  /*  @Test
   public void testToTheListOfAddressesButtonLeadsToAddressesPage() {
     loginSteps.openLoginPage();
     loginSteps.loginAsRegularUser();
     addAddressSteps.openAddAddressPage();
     addAddressSteps.clickToListOfAddressesButton();
     addressesSteps.verifyAddressPageIsOpened();
-  }
+  }*/
 }

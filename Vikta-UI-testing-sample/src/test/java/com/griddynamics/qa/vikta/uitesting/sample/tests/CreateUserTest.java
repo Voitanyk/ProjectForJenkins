@@ -28,13 +28,12 @@ public class CreateUserTest extends BaseTest {
     createUserPageSteps.clickSaveTheChangesButton();
     createUserPageSteps.verifySuccessfulUserCreationMessageContainsLoginName(loginName);
   }
-
-  @Test
+  /* @Test
   public void testAdminCannotCreateNewUserWithoutPassword() {
     registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.SURNAME);
     registrationSteps.typeRandomValueInto(RegistrationSteps.FieldName.PATRONIM);
     createUserPageSteps.typeInAvatarUrl();
     createUserPageSteps.clickSaveTheChangesButton();
     createUserPageSteps.verifyThatPasswordIsMissing();
-  }
+  }*/
 }
