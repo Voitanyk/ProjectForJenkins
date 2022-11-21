@@ -37,5 +37,4 @@ public class CreateUserTest extends BaseTest {
     createUserPageSteps.clickSaveTheChangesButton();
     createUserPageSteps.verifyThatPasswordIsMissing();
   }
-
 }

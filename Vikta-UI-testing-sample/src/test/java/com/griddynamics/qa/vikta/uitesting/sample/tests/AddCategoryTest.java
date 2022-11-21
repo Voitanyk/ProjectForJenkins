@@ -27,12 +27,6 @@ public class AddCategoryTest extends BaseTest {
   }
 
   @Test
-  public void testToTheListOfCategoriesButtonLeadsToCategoriesPage() {
-    addCategorySteps.clickToTheListOfCategoriesButton();
-    addCategorySteps.verifyThatCategoriesPageIsOpened();
-  }
-
-  @Test
   public void testResetButtonMakesTheFieldsEmpty() {
     addCategorySteps.clickResetButton();
     addCategorySteps.verifyThatTheFieldIsEmpty(AddCategorySteps.FieldName.TITLE);

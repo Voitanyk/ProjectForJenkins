@@ -44,6 +44,7 @@ public class BasePage {
   public void clickSearchButton() {
     btnSearch.click();
   }
+
   public void clickResetButton() {
     btnResetSearchCriteria.click();
   }

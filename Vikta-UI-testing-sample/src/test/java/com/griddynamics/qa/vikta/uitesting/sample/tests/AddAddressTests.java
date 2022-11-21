@@ -25,14 +25,4 @@ public class AddAddressTests extends BaseTest {
     addAddressSteps.verifyThatSuccessAddressCreationMessageIsDisplayed();
   }
 
-  @Test
-  public void testClearButtonMakesAddressFieldsEmpty() {
-    addAddressSteps.clickClearButton();
-    addAddressSteps.verifyThatTheFieldIsEmpty(AddAddressSteps.FieldName.STREETNAME);
-    addAddressSteps.verifyThatTheFieldIsEmpty(AddAddressSteps.FieldName.ADDITIONALSTREETINFO);
-    addAddressSteps.verifyThatTheFieldIsEmpty(AddAddressSteps.FieldName.CITY);
-    addAddressSteps.verifyThatTheFieldIsEmpty(AddAddressSteps.FieldName.REGION);
-    addAddressSteps.verifyThatTheFieldIsEmpty(AddAddressSteps.FieldName.POSTALCODE);
-    addAddressSteps.verifyThatTheFieldIsEmpty(AddAddressSteps.FieldName.ADDRESSNICKNAME);
-  }
 }

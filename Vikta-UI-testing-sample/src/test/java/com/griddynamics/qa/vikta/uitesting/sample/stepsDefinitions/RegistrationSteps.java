@@ -16,9 +16,9 @@ public class RegistrationSteps extends BaseSteps {
 
   //  RandomData randomData = new RandomData();
 
-  final static String SUCCESSFUL_REGISTRATION_MESSAGE_PREFIX =
+  static final String SUCCESSFUL_REGISTRATION_MESSAGE_PREFIX =
     "User has been registered successfully: ";
-  final static String UNSUCCESSFUL_REGISTRATION_MESSAGE_PREFIX =
+  static final String UNSUCCESSFUL_REGISTRATION_MESSAGE_PREFIX =
     "There is already a user registered with";
 
   public RegistrationSteps(WebDriver driver) {

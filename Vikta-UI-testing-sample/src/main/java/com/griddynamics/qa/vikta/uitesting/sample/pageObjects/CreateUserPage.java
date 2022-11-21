@@ -26,9 +26,7 @@ public class CreateUserPage extends BasePage {
   @FindBy(xpath = "//*[@id=\'lPassword\']")
   private WebElement errorPasswordMessage;
 
-
-    //TODO: Add missing elements.+
-
+  //TODO: Add missing elements.+
 
   public void clickSaveTheChanges() {
     btnSave.click();

@@ -28,5 +28,4 @@ public class CategoriesTest extends BaseTest {
     categoriesSteps.openCategoriesPage();
     categoriesSteps.verifyThatCategoryIsAddedToTheList(enteredTitle, enteredDescription);
   }
-
 }

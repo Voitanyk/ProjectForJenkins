@@ -2,6 +2,7 @@ package com.griddynamics.qa.vikta.uitesting.sample.stepsDefinitions;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.testng.AssertJUnit.*;
+
 import com.griddynamics.qa.vikta.uitesting.sample.pageObjects.AddCategoryPage;
 import io.qameta.allure.Step;
 import java.time.Duration;
@@ -19,6 +20,7 @@ public class AddCategorySteps extends BaseSteps {
   public void openAddCategoryPage() {
     getDriver().get(getData().addCategoryPageUrl());
   }
+
   @Step
   public String fillInTheField(FieldName fieldName) {
     String valueToReturn;
@@ -36,9 +38,7 @@ public class AddCategorySteps extends BaseSteps {
         page().typeInPathToImage(valueToReturn);
         break;
       default:
-        throw new IllegalArgumentException(
-          "Unsupported AddCategory page field name: " + fieldName
-        );
+        throw new IllegalArgumentException("Unsupported AddCategory page field name: " + fieldName);
     }
     return valueToReturn;
   }

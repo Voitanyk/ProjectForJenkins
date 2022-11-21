@@ -15,7 +15,7 @@ public class CreateUserPageSteps extends BaseSteps {
     PASSWORD,
   }
 
-  final static String WARNING_MESSAGE = "size must be between 1 and 288";
+  static final String WARNING_MESSAGE = "size must be between 1 and 288";
 
   public CreateUserPageSteps(WebDriver driver) {
     super(driver);

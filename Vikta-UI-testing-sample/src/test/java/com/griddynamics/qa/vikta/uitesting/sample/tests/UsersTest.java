@@ -24,14 +24,9 @@ public class UsersTest extends BaseTest {
     usersPageSteps.openUsersPage();
   }
 
-  @Test
-  public void testThatTheUserWasAddedToTheUsersList() {
-    usersPageSteps.verifyThatUserIsAdded(loginName);
-  }
 
   @Test
   public void testThatTheUserWasDeletedFromTheUsersList() {
     usersPageSteps.verifyThatUserIsDeleted(loginName);
   }
-
 }

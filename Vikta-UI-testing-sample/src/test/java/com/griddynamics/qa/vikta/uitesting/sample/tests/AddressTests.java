@@ -30,7 +30,6 @@ public class AddressTests extends BaseTest {
     addAddressSteps.verifyThatSuccessDeleteMessageIsDisplayed();
   }
 
-
   @Test
   public void testToTheListOfAddressesButtonLeadsToAddressesPage() {
     loginSteps.openLoginPage();

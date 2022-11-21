@@ -15,18 +15,6 @@ public class HutTests extends BaseTest {
 
 
   @Test
-  public void testImageItemsButtonOpensImageItemsPage() {
-    hutPageSteps.clickImageItemsButton();
-    hutPageSteps.verifyThatNeededPageIsOpened(HutPageSteps.PageName.IMAGES);
-  }
-
-  @Test
-  public void testAddImageButtonOpensAddImagePage() {
-    hutPageSteps.clickAddImageButton();
-    hutPageSteps.verifyThatNeededPageIsOpened(HutPageSteps.PageName.ADDIMAGE);
-  }
-
-  @Test
   public void testUsersButtonOpensUsersPage() {
     hutPageSteps.clickUsersButton();
     hutPageSteps.verifyThatNeededPageIsOpened(HutPageSteps.PageName.USERS);
