@@ -12,12 +12,14 @@ public class HutTests extends BaseTest {
     loginSteps.loginAsAdmin();
     hutPageSteps.openHutPage();
   }
-   @Test
+
+  @Test
   public void testUsersButtonOpensUsersPage() {
     hutPageSteps.clickUsersButton();
     hutPageSteps.verifyThatNeededPageIsOpened(HutPageSteps.PageName.USERS);
   }
-   @Test
+
+  @Test
   public void testCreateUserButtonOpensCreateUserPage() {
     hutPageSteps.clickCreateUserButton();
     hutPageSteps.verifyThatNeededPageIsOpened(HutPageSteps.PageName.CREATEUSER);

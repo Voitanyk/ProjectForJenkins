@@ -17,7 +17,8 @@ public class CategoriesTest extends BaseTest {
     loginSteps.openLoginPage();
     loginSteps.loginAsAdmin();
   }
-   @Test
+
+  @Test
   public void testCreatedCategoryIsAddedToTheList() {
     addCategorySteps.openAddCategoryPage();
     enteredTitle = addCategorySteps.fillInTheField(AddCategorySteps.FieldName.TITLE);
@@ -27,5 +28,4 @@ public class CategoriesTest extends BaseTest {
     categoriesSteps.openCategoriesPage();
     categoriesSteps.verifyThatCategoryIsAddedToTheList(enteredTitle, enteredDescription);
   }
-
 }

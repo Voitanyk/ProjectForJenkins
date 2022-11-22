@@ -38,10 +38,11 @@ public class LoginTest extends BaseTest {
     // Then Home is displayed for the regular user
     loginSteps.verifyCurrentPageIsHomePageForTheRegularUser();
   }
+
   /**
    * Scenario: Admin user is able to login
    */
-   @Test(groups = { "smoke", "login" })
+  @Test(groups = { "smoke", "login" })
   public void testAdminUserIsAbleToLogin() {
     // Given user opens Login page
     loginSteps.openLoginPage();
@@ -54,7 +55,7 @@ public class LoginTest extends BaseTest {
   /**
    * Scenario Outline: Cannon login using invalid username and/or password
    */
-   @Test(groups = { "smoke", "login", "invalid" }, dataProvider = "invalidLoginDataCases")
+  @Test(groups = { "smoke", "login", "invalid" }, dataProvider = "invalidLoginDataCases")
   public void testInvalidCredentialsNotAbleToLogin(String name, String password) {
     // Given user opens Login page
     loginSteps.openLoginPage();
