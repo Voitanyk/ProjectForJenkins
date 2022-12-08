@@ -10,17 +10,18 @@ public class HutTests extends BaseTest {
   public void setUp() {
     loginSteps.openLoginPage();
     loginSteps.loginAsAdmin();
-    hutPageSteps.openHutPage();
   }
 
   @Test
   public void testUsersButtonOpensUsersPage() {
+    hutPageSteps.openHutPage();
     hutPageSteps.clickUsersButton();
     hutPageSteps.verifyThatNeededPageIsOpened(HutPageSteps.PageName.USERS);
   }
 
   @Test
   public void testCreateUserButtonOpensCreateUserPage() {
+    hutPageSteps.openHutPage();
     hutPageSteps.clickCreateUserButton();
     hutPageSteps.verifyThatNeededPageIsOpened(HutPageSteps.PageName.CREATEUSER);
   }

@@ -14,20 +14,25 @@ public class AddCategoryTest extends BaseTest {
   public void setUp() {
     loginSteps.openLoginPage();
     loginSteps.loginAsAdmin();
-    addCategorySteps.openAddCategoryPage();
-    enteredTitle = addCategorySteps.fillInTheField(AddCategorySteps.FieldName.TITLE);
-    enteredDescription = addCategorySteps.fillInTheField(AddCategorySteps.FieldName.DESCRIPTION);
-    enteredPath = addCategorySteps.fillInTheField(AddCategorySteps.FieldName.PATH);
+
   }
 
   @Test
   public void testAdminCanCreateCategory() {
+    addCategorySteps.openAddCategoryPage();
+    enteredTitle = addCategorySteps.fillInTheField(AddCategorySteps.FieldName.TITLE);
+    enteredDescription = addCategorySteps.fillInTheField(AddCategorySteps.FieldName.DESCRIPTION);
+    enteredPath = addCategorySteps.fillInTheField(AddCategorySteps.FieldName.PATH);
     addCategorySteps.clickSaveButton();
     addCategorySteps.verifyMessageOfCategoryCreation();
   }
 
   @Test
   public void testResetButtonMakesTheFieldsEmpty() {
+    addCategorySteps.openAddCategoryPage();
+    enteredTitle = addCategorySteps.fillInTheField(AddCategorySteps.FieldName.TITLE);
+    enteredDescription = addCategorySteps.fillInTheField(AddCategorySteps.FieldName.DESCRIPTION);
+    enteredPath = addCategorySteps.fillInTheField(AddCategorySteps.FieldName.PATH);
     addCategorySteps.clickResetButton();
     addCategorySteps.verifyThatTheFieldIsEmpty(AddCategorySteps.FieldName.TITLE);
     addCategorySteps.verifyThatTheFieldIsEmpty(AddCategorySteps.FieldName.DESCRIPTION);
